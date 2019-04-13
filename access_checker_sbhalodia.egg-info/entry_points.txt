@@ -1,0 +1,4 @@
+[console_scripts]
+access-checker-cli = access_checker.main:main
+access-checker-gui = access_checker.gui_access_checker:create_app
+
