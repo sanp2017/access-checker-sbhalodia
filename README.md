@@ -25,7 +25,7 @@ CLI
 ------
 1. Run the following command from cli
 2. Example:
- `access-checker-cli -sip 10.1.1.10/24 -sport 22 -p tcp -dip 8.8.8.10/32 -dport 443 -f /Users/Mytestaccount/Desktop/{{YOUR ACL file}}` 
+ `access-checker-cli -sip 10.1.1.10/24 -sport 22 -p tcp -dip 8.8.8.10/32 -dport 443 -f /Users/Mytestaccount/Desktop/myaclfile.acl` 
 
 
 GUI
@@ -43,4 +43,4 @@ Best effort testing has been done. No thorough testing is completed. Please cond
 Note
 -------
 
-This tool is not intended for production environment.
+Please follow the exact input format as suggested in GUI and CLI.

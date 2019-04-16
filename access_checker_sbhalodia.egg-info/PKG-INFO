@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: access-checker-sbhalodia
-Version: 1.0.2
+Version: 1.0.3
 Summary: Access checker for Cisco ACL(extended ACL)
 Home-page: https://github.com/sanp2017/access-checker-sbhalodia.git
 Author: Sandeep Bhalodia
@@ -33,7 +33,7 @@ Description: Access Checker
         ------
         1. Run the following command from cli
         2. Example:
-         `access-checker-cli -sip 10.1.1.10/24 -sport 22 -p tcp -dip 8.8.8.10/32 -dport 443 -f /Users/Mytestaccount/Desktop/{{YOUR ACL file}}` 
+         `access-checker-cli -sip 10.1.1.10/24 -sport 22 -p tcp -dip 8.8.8.10/32 -dport 443 -f /Users/Mytestaccount/Desktop/myaclfile.acl` 
         
         
         GUI
@@ -51,7 +51,7 @@ Description: Access Checker
         Note
         -------
         
-        This tool is not intended for production environment.
+        Please follow the exact input format as suggested in GUI and CLI.
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3.7
 Classifier: License :: OSI Approved :: MIT License

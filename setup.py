@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="access-checker-sbhalodia",
-    version="1.0.2",
+    version="1.0.3",
     author="Sandeep Bhalodia",
     author_email="sandeeep.says@gmail.com",
     description="Access checker for Cisco ACL(extended ACL)",

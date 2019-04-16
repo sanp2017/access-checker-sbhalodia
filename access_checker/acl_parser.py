@@ -2,6 +2,7 @@
 
 from access_checker.wc_mask_to_cidr import to_cidr
 from access_checker.brain import access_check
+import copy
 
 
 def cisco_acl(usr_src_ip, usr_dst_ip, usr_src_port, usr_dst_port, usr_protocol, acl_file):
@@ -9,9 +10,15 @@ def cisco_acl(usr_src_ip, usr_dst_ip, usr_src_port, usr_dst_port, usr_protocol, 
         for line in f:
             if ('deny' in line or 'permit' in line) and 'established' not in line:
                 tmp1 = line.split()
+                tmp2 = copy.deepcopy(tmp1)
                 # counter = j, ip address counter = i, port counter = k. i.e when source ports gets captured k becomes 1
                 j, i, k = 0, 0, 0
                 table = {}
+                for element in tmp2:
+                    if element == 'permit' or element == 'deny':
+                        break
+                    else:
+                        del tmp1[0]
                 while j < len(tmp1):
                     if 'permit' in tmp1[j] or 'deny' in tmp1[j]:
                         table['acl_action'] = tmp1[j]
@@ -140,7 +147,3 @@ def cisco_acl(usr_src_ip, usr_dst_ip, usr_src_port, usr_dst_port, usr_protocol, 
     print('NOTE: Partial access will be flagged as DENY')
     print('-' * 150)
     return
-
-
-
-
